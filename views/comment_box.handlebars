@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><title</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div className="commentBox">
+      <h1>Comments</h1>
+      <div className="commentList">
+        {{#each comment}}
+        <div className="comment">
+          <h2 className="commentAuthor">
+            {{comment.author}}
+          </h2>
+          {{comment.text}}
+        </div>
+        {{/each}}
+      </div>
+      <form className="commentForm" action="/comment_box/comment" method="post">
+        <input type="text" Value="{{user.username}}" name="author" />
+        <input type="text" placeholder="Say something..." name="text" />
+        <input type="submit" value="Post" />
+      </form>
+    </div>
+  </body>
+</html>

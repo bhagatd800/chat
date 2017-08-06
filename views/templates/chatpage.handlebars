@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src='/js/angscript.js'></script>
+<script src='/js/angular.min.js.map'></script>
+<script src='/js/chatscript.js'></script>
+  </head>
+  <body ng-app='chat'>
+    <div ng-controller='chatController'>
+      <input type="text" placeholder="Enter Message" name="text" ng-model='message' />
+        <input type="submit" value="send" ng-click='submit()' />
+      </div>
+     
+    
+  </body>
+</html>

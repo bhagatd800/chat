@@ -1,0 +1,122 @@
+<div class="container">
+    <h1>Edit Profile</h1>
+  	<hr>
+	<div class="row">
+      <!-- left column -->
+		<div class="col-md-3">
+			<div class="text-center">
+		  		<img src="{{user.profilePic.url}}" height="100px" width="100px" id="profile-pic" class="avatar img-circle" alt="avatar">
+		  		<h6>Upload a different photo...</h6>
+		  		<div class="form-group">
+		  			<div class="input-group">
+		    			<span class="input-group-btn">
+			        		<span class="btn btn-default btn-file">
+			            		Change Image <input type="file" id="imgInp">
+			        		</span>
+		    			</span>
+					</div>
+				</div>
+			</div>
+		</div>
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        {{#if alert}}
+          	<div class="alert alert-{{alert.type}} alert-dismissable">
+            	<a class="panel-close close" data-dismiss="alert">×</a> 
+            	
+            	{{#if alert.strong}}
+            		{{alert.strong}}
+            	{{/if}} 
+            	{{alert.msg}}
+          	</div>
+        {{/if}}
+        
+        <h3>Personal info</h3>
+        
+        <form class="form-horizontal" role="form" method="post" action="/setting">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Full name:</label>
+            <div class="col-lg-8">
+              <input name="name" class="form-control" type="text" placeholder="Jane">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input name="email" class="form-control" type="text" placeholder="janesemail@gmail.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">About:</label>
+            <div class="col-lg-8">
+              <input name="about" class="form-control" type="text" placeholder="I am a cool programmer..">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Experience:</label>
+            <div class="col-lg-8">
+              <input name="experience" class="form-control" type="text" placeholder="Projects you have done...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Rating:</label>
+            <div class="col-lg-8">
+              <input name="rating" class="form-control" type="number" placeholder="Projects you have done...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Skills:</label>
+            <div class="col-lg-8">
+              <input name="skill" class="form-control" type="text" placeholder="c++,python">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Country</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select name="country" id="country" class="form-control">
+                  {{#if country}}
+                  {{#each country}}
+                    <option value="{{short}}">{{name}}</option>
+                  {{/each}}
+                {{/if}}
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Username:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" placeholder="janeuser">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" placeholder="11111122333">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Confirm password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" placeholder="11111122333">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input type="submit" class="btn btn-primary" value="Save Changes">
+              {{!-- <span></span>
+              <input type="reset" class="btn btn-default" value="Cancel"> --}}
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<hr>
+
+<script type="text/javascript">
+
+</script>

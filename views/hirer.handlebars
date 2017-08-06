@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="/css/style1.css" />
+{{#if data}}
+  {{data}}
+{{/if}}
+
+{{#if errors}}   
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+{{#if successmsg}}   
+        <div class="alert alert-success">{{successmsg}}</div>
+{{/if}}
+<h1>Post a Job</h1>
+<form method="post" action="/hirers/hirer">
+
+<div class="form-group">
+                    <label>Choose a Category</label>
+                    <select input type="text" class="form-control" name="category">
+                        <option>Web Development</option>
+                        <option>Mobile Development</option>
+                        <option>Creative Writing</option>
+                        <option>Designing</option>
+                        <option>Sales & Marketing</option>
+                        <option>Accounting</option>                        
+                    </select>
+                </div>
+ <h3>Describe the Job</h3>
+ <div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control" placeholder="Eg:Need help in developing webpage for online store" name="title">
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" class="form-control" placeholder="Detailed explanation of job to be done" name="description">
+  </div>
+  <div class="form-group">
+    <label>Tags</label>
+    <input type="text" class="form-control" placeholder="Comma separated tags" name="tags">
+  </div>
+
+
+<div class="form-group">
+                    <label>Project Type</label>
+                    <select input type="text" class="form-control" name="type">
+                        <option>One-time Project</option>
+                        <option>Ongoing Project</option>
+                                                
+                    </select>
+                </div>
+  
+  <div class="form-group">
+    <label>No of freelancers</label>
+    <input type="number" class="form-control" placeholder="Eg:no of freelancers you need to hire" name="number">
+  </div>
+<h3>Rate and Availability</h3>
+<div class="form-group">
+                    <label>How to pay</label>
+                    <select input type="text" class="form-control" name="pay">
+                        <option>Pay by hour</option>
+                        <option>Pay by project</option>
+                        
+                    </select>
+                </div>
+
+<div class="form-group">
+    <label>Amount</label>
+    <input type="number" class="form-control" placeholder="Dollar/hour for hourly And Dollar for one time projext" name="amount">
+  </div>
+  
+
+  <div class="form-group">
+                    <label>Desired Experienced Level</label>
+                    <select input type="text" class="form-control" name="level">
+                        <option>Entry Level</option>
+                        <option>Intermediate Level</option>
+                        <option>Expert Level</option>
+                        
+                    </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Attachment</label>
+ 
+                     <input type="fileschema" class="form-control" name="attachment">
+    
+                </div>
+
+  <div class="form-group">
+    <label>Project Time</label>
+    <input type="date" class="form-control" min="2000-01-02" name="dueDate">
+  </div>
+
+<button type="submit" class="btn btn-default">Post Job</button>
+</form>

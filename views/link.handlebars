@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
+  <style>
+  body {
+  background-color: #f4511e;
+  padding: 20px;
+  margin: 0;
+}
+h1, h2, p, ul, li {
+  font-family: Helvetica, Arial, sans-serif;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: #111;
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.content {
+  background-color: #FFF;
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+.active {
+  background-color: orange;
+}
+  </style>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://npmcdn.com/react-router@3.0.2/umd/ReactRouter.min.js"></script>
+</head>
+<body background="bg.jpg">
+<div id="container">
+  
+  </div>
+<script type="text/babel">
+  var { Router,
+      Route,
+      IndexRoute,
+      IndexLink,
+      hashHistory,
+      Link } = ReactRouter;
+    var destination = document.querySelector("#container");
+  var Home = React.createClass({
+  render: function() {
+      return (
+        <div>
+          <h2></h2>
+      <p><img src="find.PNG" width="481" height="348" /></p>
+      <div class="container">
+      <p>Here you’ll find a range of top talent, from programmers to designers, writers, customer support reps, and more.</p>
+<ul>
+<li><b>Start by posting a job.</b> Tell us about your project and the specific skills required. Learn how.</li>
+<li><b>We analyzes your needs.</b> Our search functionality uses data science to highlight freelancers based on their skills, helping you find talent that’s a good match.</li>
+<li><b>We send you a shortlist of likely candidates.</b> You can also search our site for talent, and freelancers can view your job and submit proposals too.</li>
+</ul>
+ <a href="/find"><h1>Details</h1></a>
+
+          
+          
+
+      </div>
+        </div>
+      );
+    }
+});
+var Pay = React.createClass({
+  render: function() {
+      return (
+        <div>
+          <h2>GOT QUESTIONS?</h2>
+          <p>
+          
+      <img src="pay.PNG" width="248" height="204" />
+      <div>
+      <p>Pay your freelancer by the hour, or a fixed price for the entire project. On fixed-price jobs, use our licensed escrow service to release funds as pre-set milestones are met.</p>
+<ul>
+<li><b>Simplified global payments.</b> We deliver payments to freelancers in over 170 countries.</li>
+<li><b>Includes Upwork Payment Protection.</b> Only pay for work you authorize.</li>
+<li><b>Invoicing and reporting.</b> Access your invoices and transaction history on Upwork.</li>
+</ul>
+<a href="/pay"><h1>Details</h1></a>
+</div>
+          </p>
+        </div>
+      );
+    }
+});
+var Hire = React.createClass({
+  render: function() {
+      return (
+        <div>
+          
+          
+      <img src="hire.PNG" width="529" height="432" />
+      <div>
+      <p>Invite favorite candidates to submit bids, then review and hire your favorite.</p>
+<ul>
+<li><b>Browse profiles.</b> View finalists’ profiles to see client ratings, portfolios, Job Success scores, and more.</li>
+<li><b>Review proposals.</b> Evaluate bids, taking into account each freelancer’s qualifications, thought process, timeline, and overall cost.</li>
+<li><b>Schedule a chat.</b> Ask specific questions, determine who’s the best fit, and contract.</li>
+</ul>
+<a href="/hire"><h1>Details</h1></a>
+
+  </div>    
+          
+        </div>
+      );
+    }
+});
+var Work = React.createClass({
+  render: function() {
+      return (
+        <div>
+          <h2>STUFF for Hirer</h2>
+          <p>
+      <p><img src="work.PNG" width="380" height="487" /></p>Use our platform to chat, share files, and collaborate from your desktop.</p>
+          <p>Each project includes an online workspace shared by your team and your freelancer, allowing you to:</p>
+      <div>
+<ul>
+<li><b>Send and receive files.</b> Deliver digital assets in a secure environment.</li>
+<li><b>Share feedback in real time.</b> Use Upwork Messages to communicate via text, chat, or video. Learn how.</li>
+<li><b>Use our mobile app.</b> Many features can be accessed on your mobile phone when on the go.</li>
+<a href="/work"><h1>Details</h1></a>
+
+</ul>
+</div>
+        </div>
+      );
+    }
+});
+var App = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <h1>How it works?</h1>
+        <ul className="header">
+    <li><IndexLink to="/" activeClassName="active"><h2>Find</h2></IndexLink></li>
+          
+          <li><Link to="/hire"><h2>Hire</h2></Link></li>
+      <li><Link to="/work"><h2>Work</h2></Link></li>
+          <li><Link to="/pay"><h2>pay</h2></Link></li>
+      
+      
+        </ul>
+        <div className="content">
+ {this.props.children}
+        </div>
+      </div>
+    )
+  }
+});
+    ReactDOM.render(
+  <ReactRouter.Router history={ReactRouter.hashHistory}>
+    <ReactRouter.Route path="/" component={App}>
+ <IndexRoute component={Home}/>
+ <Route path="hire" component={Hire} />
+ <Route path="work" component={Work} />
+      <Route path="pay" component={Pay} />
+    </ReactRouter.Route>
+  </ReactRouter.Router>,
+  destination
+);
+  </script>
+
+</body>
+</html>

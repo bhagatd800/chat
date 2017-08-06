@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "author": "Pete Hunt",
+        "text": "This is one comment"
+    },
+    {
+        "id": 2,
+        "author": "Jordan Walke",
+        "text": "This is *another* comment"
+    },
+    {
+        "author": "Susmita",
+        "text": "Love this app",
+        "id": 1500425734657
+    },
+    {
+        "author": "sus",
+        "text": "hey",
+        "id": 1500988954699
+    },
+    {
+        "author": "deepak",
+        "text": "hello",
+        "id": 1501924251483
+    }
+]

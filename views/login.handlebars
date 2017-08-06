@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+
+<h1 class="text-center login-title">Account Login</h1>
+<form method="post" action="/users/login">
+<div class="account-wall">
+                <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    alt="">
+              
+<div class="form-group">
+    <label>Username</label>
+                <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+                </div>
+                <div class="form-group">
+    <label>Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Sign in</button>
+                <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    Remember me
+                </label>
+                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                </form>
+            </div>
+            <a href="/users/register" class="text-center new-account">Create an account </a>
+
+</form>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+

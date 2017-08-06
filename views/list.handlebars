@@ -1,0 +1,64 @@
+<!-- @author Susmita -->
+
+
+<div class="container">
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+            <div class="input-group" id="adv-search">
+                <form method="get" action="/list">
+                </form>
+                <input type="text" class="form-control" name="search" placeholder="Search for snippets" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#each freelancers}}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+            <div class="well profile">
+                <div class="col-sm-12">
+                    <div class="col-xs-12 col-sm-8">
+                        <h2>{{this.name}}</h2>
+                        <p><strong>About: </strong> {{this.about}} </p>
+                        <p><strong>Experience: </strong> {{this.experience}} </p>
+                        <p><strong>Skills: </strong>
+                            {{#each this.skill}}
+                                <span class="tags">{{this}}</span> 
+                            {{else}}
+                                <span>No skills</span>
+                            {{/each}}
+                        </p>
+                    </div>             
+                    <div class="col-xs-12 col-sm-4 text-center">
+                        <figure>
+                            <img src="{{this.profilePic.url}}" alt="" class="img-circle img-responsive">
+                            <figcaption class="ratings">
+                                <p>Ratings
+                                {{#if this.rating}}
+                                    {{#times this.rating}}
+                                        <a href="#">
+                                            <span class="fa fa-star"></span>
+                                        </a>
+                                    {{/times}}
+                                    {{#times (math 5 '-' this.rating)}}
+                                        <a href="#">
+                                            <span class="fa fa-star-o"></span>
+                                        </a>
+                                    {{/times}}
+                                {{else}}
+                                    <span>Not rated yet.</span>
+                                {{/if}}
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>            
+            </div>                 
+        </div>
+    </div>
+    {{/each}}
+</div>
